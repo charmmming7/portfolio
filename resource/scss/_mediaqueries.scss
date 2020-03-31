@@ -1,0 +1,87 @@
+@media all and (max-width:1080px) {
+     #header {
+          .container_fluid {
+               .gnb-wrap {
+                    display: none;
+               }
+          }
+     }
+     .btn {
+          &.menu {
+               display: block;
+          }
+     }
+}
+
+
+@media all and (max-width:768px) {     
+     #wrap{
+          #contents{
+               section{
+                    .paragraph {
+                         float: none;
+                         width: 100%;
+                         &:first-child {
+                              padding-right: 0;
+                         }
+                         &:nth-child(2) {
+                              padding-left: 0;
+                         }
+                         p {
+                              margin-bottom: 15px;
+                              line-height: 1.6;
+                              margin-bottom: 15px;
+                         }
+                         h5 {
+                              margin: 10px 0;
+                         }
+                    }
+
+                    &#home{
+                         ._container{
+                              h1 {
+                                   font-size: 8rem;
+                                   line-height: 1.2em;
+                              }
+                         }
+                    }
+
+                    &#skillset {
+                         .content{
+                              .block{
+                                   float: none;
+                                   width: 100%;
+                                   &:last-child{
+                                        margin-top: 35px;
+                                   }
+                              }
+                              &.license {
+                                   ul {
+                                        display: block;
+
+                                        li {
+                                             margin: 30px 0;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+
+                    &#projects{
+                         ._container{
+                               #grid {
+                                    a.element{
+                                         width: 50%;
+                                         .dist {
+                                              span.title{
+                                                   font-size: 1em;
+                                              }
+                                         }
+                                    }
+                               }
+                         }
+                    }
+               }
+          }
+     }
+}

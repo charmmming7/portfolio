@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/*
+** common
+*/
+$font-color: #000;
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+img {vertical-align: top;max-width: 100%;}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input::-ms-clear {display:none}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;font-family:'Apple SD Gothic Neo', '맑은고딕', 'MalgunGothic','돋움', dotum, sans-serif; color:$font-color;}
+.os_mac body,.os_mac th,.os_mac td,.os_mac input,.os_mac select,.os_mac textarea,.os_mac button {font-family:apple SD gothic neo,'돋움',dotum,sans-serif}
+
+input[type=password],
+input[type=text],
+textarea {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    outline: 0;
+    padding: 3px 5px;
+    margin: 0;
+    height: 25px;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+}
+select {
+    margin: 0;
+    border: 1px solid #ddd;
+    cursor: pointer
+}
+select::-ms-expand {
+    display: none
+}
+input::-ms-clear {
+    display:none;
+}
+input::-webkit-input-placeholder {
+    color: #848689;
+}
+input:-ms-input-placeholder {
+    color: #848689;
+}
+textarea::-webkit-input-placeholder {
+    color: #848689;
+}
+textarea:-ms-input-placeholder {
+    color: #848689;
+}
+button {
+    border:0 none;
+    background-color:transparent;
+    cursor:pointer;
+}
+
+/*링크에 대한 설정*/
+a {color:$font-color; text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+a:active {background-color:transparent}
+a:active, a:focus, button:active, button:focus, video:active, video:focus{ outline: 0;}
+
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+article, aside, figure, figure img,figcaption, hgroup, footer, header, nav, section, video, object {display:block;}
+*, *::before, *::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+ }
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+}
+body{
+    overflow-x: hidden;
+}
+
+/*
+** helper
+*/
+.clearfix:after,
+.clearfixDiv{
+    display: block;
+    visibility: hidden;
+    content: ".";
+    clear: both;
+    text-indent: -9999px;
+    height: 0;
+}

@@ -1,0 +1,101 @@
+<!--<div class="section delivery">-->
+<div class="_container">
+     <div class="subtitle pc"><img src="./images/title_delivery.png" alt="배송 정보 입력"></div>
+     <div class="subtitle mobile"><img src="./images/title_delivery.png" alt="배송 정보 입력"></div>
+
+     <input type="text" id="setR" class="inputData req hidden" maxlength="50" value="" placeholder="value에 랭킹값 넣기">
+     <input type="text" id="code" class="inputData req hidden" maxlength="50" placeholder="코드">
+
+     <table class="tables deliveryinfor" cellpadding="0" cellspacing="0">
+          <!--<caption>배송 정보</caption>-->
+          <tbody>
+               <tr class="eq0">
+                    <th>받는 분</th>
+                    <td>
+                         <input type="text" id="order_user_name" class="inputData req" data-title="받는 분" maxlength="50" value="">
+                         <p class="alertMsg eq0">받는 분 성함을 입력해주세요.</p>
+                    </td>
+               </tr>
+               <tr class="eq01">
+                    <th>휴대폰 번호</th>
+                    <td>
+                         <select id="order_user_phone1" class="inputData phone first">
+                              <option value="010" selected>010</option>
+                              <option value="011">011</option>
+                              <option value="016">016</option>
+                              <option value="017">017</option>
+                              <option value="018">018</option>
+                              <option value="019">019</option>
+                         </select><span class="dash">-</span>
+                         <input type="tel" id="order_user_phone2" class="inputData req phone" maxlength="4" data-title="휴대폰 번호1" value=""><span class="dash">-</span>
+                         <input type="tel" id="order_user_phone3" class="inputData req phone" maxlength="4" data-title="휴대폰 번호2" value="">
+                         <p class="alertMsg eq01">휴대폰 번호를 정확히 입력해주세요.</p>
+                    </td>
+               </tr>
+               <tr>
+                    <th>주소</th>
+                    <td>
+                         <input type="text" id="delivery_zipcode" class="inputData req zipcode" data-title="우편번호" readonly value="">
+                         <button class="btn zipcode">우편번호</button>
+                         <input type="text" id="delivery_address1" class="inputData req address" data-title="주소" readonly value="">
+                         <p class="alertMsg eq02">우편번호 찾기로 주소를 입력해주세요.</p>
+                         <input type="text" id="delivery_address2" class="inputData req address" placeholder="상세주소" data-title="상세주소" value="">
+                         <p class="alertMsg eq03">상세주소를 입력해주세요.</p>
+                    </td>
+               </tr>
+               <tr>
+                    <th>요청사항</th>
+                    <td>
+                         <input type="text" id="delivery_memo" class="inputData" maxlength="40">
+                    </td>
+               </tr>
+          </tbody>
+     </table>
+     <dl class="agreebox">
+          <dt>&lt;이용약관 및 개인정보 수집/이용 동의&gt;</dt>
+          <dd>동의 체크가 되지 않을 경우, 경품이 발송이 되지 않습니다.</dd>
+          <dd class="checkdd">
+               <input type="checkbox" id="agreeCheck" name="privacyCheck" />
+               <label for="agreeCheck" class="checkBoxRadio"><img src="./images/checkbox_radio_off.jpg" alt="" class="check off"><img src="./images/checkbox_radio_on.jpg" alt="" class="check on">(필수) 이용약관 동의</label>
+               <a href="./term.html" target="_blank">전체보기</a>
+               <p class="alertMsg eq04">이용약관 동의를 체크해주세요.</p>
+          </dd>
+          <dd class="checkdd">
+               <input type="checkbox" id="agreeCheck2" name="privacyCheck2" />
+               <label for="agreeCheck2" class="checkBoxRadio"><img src="./images/checkbox_radio_off.jpg" alt="" class="check off"><img src="./images/checkbox_radio_on.jpg" alt="" class="check on">(필수) 개인정보 수집 및 이용에 동의함</label>
+               <p class="alertMsg eq05">개인정보 수집/이용 동의를 체크해주세요.</p>
+          </dd>
+          <dd class="infor">
+               <ul>
+                    <li>수집항목 : 이름, 휴대폰번호, 주소</li>
+                    <li>이용목적 : 이벤트 참여 및 경품배송</li>
+                    <li class="line3">보유기간 : 이벤트 신청 후 90일</li>
+                    <li class="line4">고객님은 동의를 거부할 권리가 있으며, 거부 시<br class="mobilebr"> 경품수령이 불가합니다.</li>
+               </ul>
+          </dd>
+          <dt>
+               만 14세 이상만 신청 가능합니다
+          </dt>
+          <dd class="checkdd last">
+               <input type="checkbox" id="ageCheck" name="age14" />
+               <label for="ageCheck" class="checkBoxRadio"><img src="./images/checkbox_radio_off.jpg" alt="" class="check off"><img src="./images/checkbox_radio_on.jpg" alt="" class="check on">(필수) 14세 이상입니다.</label>
+               <p class="alertMsg eq06">만 14세 이상만 신청 가능합니다.</p>
+          </dd>
+     </dl>
+
+     <dl class="readbox">
+          <dt>꼭 확인하세요</dt>
+          <dd>- 본 이벤트는 롯데마트&amp;홈플러스 매장에서 한정판 SMTM777 질레트 팩 구입 후 스크래치 카드에 적힌 당첨코드를 입력 하면 이벤트 참여가 가능합니다.</dd>
+          <dd>- 본 이벤트는한정판 SMTM777 질레트팩을 구매해주신분들 중 추첨을 통해 당첨자를 선정합니다.</dd>
+          <dd>- 경품에 대한 제세공과금 22%는 본인 부담이며, 개별 안내 된 납부 기간 내에 제세공과금 미 납부 시 자동 당첨 취소 됩니다.</dd>
+          <dd>- 본 이벤트는 당사 사정에 의해 변경 및 지연될 수 있으며, 경품은 입력해주신 회원정보의 주소지로 발송됩니다.</dd>
+          <dd>- 이벤트 당첨자의 경우 경품배송의 목적으로 개인정보(이름, 연락처, 주소)를 수집합니다. <a href="./privacy.html" target="_blank">개인정보 취급방침 보기</a></dd>
+          <dd>- 부정확한 정보로 인한 문제 발생 시 도움을 드리기 어려우며, 고객 귀책으로 경품이 오배송 및 반송되는 경우 재발송이 불가합니다.</dd>
+          <dd>- 개인정보 위탁 처리 안내 : 위탁업체(바이널아이), 위탁업무(경품배송 및 제세공과금 처리), 문의처(tantype@prototype.co.kr / 02-2015-3690)</dd>
+     </dl>
+
+     <div class="guidebtnWrap">
+          <button type="submit" class="guidebtn finish">완료</button>
+     </div>
+</div>
+<!--</div>-->

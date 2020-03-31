@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*
+** common
+*/
+$font-color: #000;
+$font-family : 'Noto Sans KR';
+
+/* reset */
+*, *:after, *:before, *::after, *::before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+img {vertical-align: top;max-width: 100%;}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input::-ms-clear {display:none}
+body,th,td,input,select,textarea,button, a {font-size:14px;line-height:1.5;font-family:$font-family, sans-serif; color:$font-color;}
+.os_mac body,.os_mac th,.os_mac td,.os_mac input,.os_mac select,.os_mac textarea,.os_mac button {font-family:apple SD gothic neo,'돋움',dotum,sans-serif}
+
+input[type=password],
+input[type=text],
+textarea {
+    outline: 0;
+    padding: 3px 5px;
+    margin: 0;
+    height: 25px;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+select {
+    margin: 0;
+    border: 1px solid #ddd;
+    cursor: pointer
+}
+select::-ms-expand {
+    display: none
+}
+input::-ms-clear {
+    display:none;
+}
+input::-webkit-input-placeholder {
+    color: #848689;
+}
+input:-ms-input-placeholder {
+    color: #848689;
+}
+textarea::-webkit-input-placeholder {
+    color: #848689;
+}
+textarea:-ms-input-placeholder {
+    color: #848689;
+}
+
+/*링크/버튼에 대한 설정*/
+button, a {
+     border:0 none;
+     background-color:transparent;
+     cursor: pointer;
+     color:$font-color;
+     text-decoration:none;
+     border-radius:0;
+     -webkit-appearance:none;
+     outline: none;
+}
+a:active, a:hover, button:active, button:hover {text-decoration:none;}
+a:active, button:active {background-color:transparent; border: none;}
+
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+article, aside, figure, figure img,figcaption, hgroup, footer, header, nav, section, video, object {display:block;}
+
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    overflow-x: hidden;
+    -webkit-text-size-adjust:none /* 뷰포트 변환시 폰트크기 자동확대 방지 */
+}
+
+/*
+** helper
+*/
+.clearfix:after,
+.clearfixDiv{
+    display: block;
+    visibility: hidden;
+    content: ".";
+    clear: both;
+    text-indent: -9999px;
+    height: 0;
+}
+._role-tbl {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.full-img {
+	width: 100%;
+	display: block;
+}
+.blind {
+	position: absolute;
+	top: -100%;
+	left: -100%;
+     width: 0;
+     height: 0;
+	font-size: 0;
+     opacity: 0;
+     visibility: hidden;
+	text-indent: -9999;
+}
+.al-center {
+	text-align: center;
+}

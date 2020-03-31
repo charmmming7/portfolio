@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@font-face {
+  font-family: futura;
+  src: url("../fonts/FuturaStd-Medium.eot");
+  src: local(Å), url("../fonts/FuturaStd-Medium.woff2") format("woff2"), url("../fonts/FuturaStd-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: HYB;
+  src: url("../fonts/HYKheadB.eot");
+  src: local(Å), url("../fonts/HYKheadB.eot#iefix") format("embedded-opentype"), url("../fonts/HYKheadB.woff2") format("woff2"), url("../fonts/HYKheadB.woff") format("woff"); }
+
+@font-face {
+  font-family: HYM;
+  src: url("../fonts/HYKheadM.eot");
+  src: local(Å), url("../fonts/HYKheadM.eot#iefix") format("embedded-opentype"), url("../fonts/HYKheadM.woff2") format("woff2"), url("../fonts/HYKheadM.woff") format("woff"); }

@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+@mixin rnded ($rndValue) {
+  -webkit-border-top-left-radius:$rndValue;
+  -webkit-border-top-right-radius:$rndValue;
+  -webkit-border-bottom-left-radius:$rndValue;
+  -webkit-border-bottom-right-radius:$rndValue;
+	border-top-left-radius:$rndValue;
+	border-top-right-radius:$rndValue;
+	border-bottom-left-radius:$rndValue;
+	border-bottom-right-radius:$rndValue;
+}
+
+@mixin boxShadow ($x, $y, $blur, $spread, $color, $inset: false) {
+	@if $inset {
+		webkit-box-shadow: $inset $x $y $blur $spread $color;
+		-moz-box-shadow: $inset $x $y $blur $spread $color;
+		box-shadow: $inset $x $y $blur $spread $color;
+	} @else {
+		webkit-box-shadow: $x $y $blur $spread $color;
+		-moz-box-shadow: $x $y $blur $spread $color;
+		box-shadow: $x $y $blur $spread $color;
+	}
+}
+
+@mixin midCenterTransform ($x, $y) {
+	-webkit-transform:translate($x, $y);
+	transform:translate($x, $y);
+}
+@mixin clampNum ($line) {
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:$line;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	word-wrap:break-word;
+}
+
+@mixin opacity($color, $opacity, $bg:false) {
+	filter:alpha(opacity = $opacity);
+	opacity:$opacity / 100;
+
+	@if $bg == true{
+		background-color: $color;
+	}
+}
+
+@mixin ellipsis{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+@mixin dummy{
+	display:inline-block;
+	overflow:hidden;
+	height:100%;
+	vertical-align:middle;
+	content:'';
+}
+@mixin clearfix{
+	&:after{
+		display:block;
+		clear:both;
+		content:'';
+	}
+}
+
+@mixin u_tb{
+	display:table;
+	width:100%;
+	table-layout:fixed;
+}
+@mixin u_td{
+	display:table-cell;
+}
+
+@mixin thumb_dim{
+  &:after{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:.03;
+    content:'';
+    .ie8 &{content:none;}
+  }
+}
+
+@mixin fn_valign{
+	font-size:0;text-align:center;
+	&:after{
+		@include dummy;
+	}
+	img{
+		max-width:100%;height:auto;max-height:100%;vertical-align:middle;
+	}
+}
+
+// a11y : 모듈 내 이미지 영역 outline 미노출 현상 대안
+@mixin kbd_outline {
+  position:absolute;top:0;left:0;width:100%;height:100%;box-shadow:inset 0 0 2px #000;content:'';
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;  
+      animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin text_ellipsis {
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
